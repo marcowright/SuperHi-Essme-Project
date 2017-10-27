@@ -1,0 +1,219 @@
+body {
+  font-family: Playfair Display;
+  font-size: 16px;
+  line-height: 1.3;
+
+  background-color: #f4f4f4;
+  color: #000000;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrap {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header {
+  background-color: #000;
+  border-top: solid 5px #feea34;
+}
+/* Apply flex styles to container instead of outer element to get it working */
+header .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  width: 75px;
+}
+
+.hero {
+  background-image: url(../assets/hero.jpg);
+  background-size: cover;
+  background-position: right center;
+  padding: 110px 0 120px 0;
+  margin-bottom: 25px;
+}
+
+.hero h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 24px;
+}
+
+.intro {
+  max-width: 440px;
+}
+
+.filter {
+  margin: 15px 0 20px 0;
+}
+
+.filter li {
+  display: inline;
+}
+
+.show-filters {
+  display: none;
+}
+
+nav.filter a {
+  color: #000000;
+  margin-right: 10px;
+}
+
+.filter .selected {
+  font-weight: 700;
+  border-bottom: solid 3px #feea34;
+  padding-bottom: 1px;
+}
+
+.products .wrap {
+  display: flex;
+  /* Tells flexbox to allow items to wrap to next line */
+  flex-wrap: wrap;
+}
+
+.products {
+  margin-bottom: 60px;
+}
+
+.product {
+  width: 33.33%;
+  position: relative;
+}
+
+.overlay {
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(254, 234, 52, 0.69);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+/* .product:hover .overlay {
+  opacity: 1;
+  
+} */
+
+.product h4,
+.product p {
+  font-weight: 700;
+}
+
+.product p {
+  font-size: 36px;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+
+.product h4 {
+  font-size: 18px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.filter .show-filters {
+  color: #bfbfb7;
+  font-weight: 700;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    padding-top: 55px;
+    padding-bottom: 60px;
+  }
+
+  .wrap {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .product {
+    width: 50%;
+  }
+}
+
+@media (max-width: 770px) {
+  .hero {
+    background-image: none;
+    background-color: #bfbfb7;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .intro {
+    max-width: none;
+  }
+}
+
+@media (max-width: 540px) {
+  .intro h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .intro p {
+    font-size: 16px;
+  }
+
+  .wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  .filter li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /*   .filters-list {
+    display: none;
+  } */
+
+  .show-filters {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .product {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 400px) {
+  .filters-list {
+    display: block !important;
+  }
+}
